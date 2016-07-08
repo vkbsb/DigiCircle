@@ -1,0 +1,134 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://gameplay/scene.gd" type="Script" id=1]
+[ext_resource path="res://imgs/ring.png" type="Texture" id=2]
+[ext_resource path="res://imgs/circle.png" type="Texture" id=3]
+
+[node name="gameplay" type="Node2D"]
+
+transform/pos = Vector2( 320, 480 )
+script/script = ExtResource( 1 )
+BallImgSize = 256
+
+[node name="ring" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 1.50739 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="activeCircle" type="Sprite" parent="."]
+
+transform/scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="1" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( 713.333, 0 )
+texture = ExtResource( 3 )
+
+[node name="9" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( -713.333, 0 )
+texture = ExtResource( 3 )
+
+[node name="2" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( 661.391, -267.219 )
+transform/rot = 22.0
+texture = ExtResource( 3 )
+
+[node name="10" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( -661.391, 267.219 )
+transform/rot = 22.0
+texture = ExtResource( 3 )
+
+[node name="3" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( 513.129, -495.523 )
+transform/rot = 44.0
+texture = ExtResource( 3 )
+
+[node name="11" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( -513.129, 495.523 )
+transform/rot = 44.0
+texture = ExtResource( 3 )
+
+[node name="4" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( 290.139, -651.662 )
+transform/rot = 66.0
+texture = ExtResource( 3 )
+
+[node name="12" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( -290.139, 651.662 )
+transform/rot = 66.0
+texture = ExtResource( 3 )
+
+[node name="5" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( 24.895, -712.899 )
+transform/rot = 88.0
+texture = ExtResource( 3 )
+
+[node name="13" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( -24.895, 712.899 )
+transform/rot = 88.0
+texture = ExtResource( 3 )
+
+[node name="6" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( -243.974, -670.314 )
+transform/rot = 110.0
+texture = ExtResource( 3 )
+
+[node name="14" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( 243.974, 670.314 )
+transform/rot = 110.0
+texture = ExtResource( 3 )
+
+[node name="7" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( -477.313, -530.11 )
+transform/rot = 132.0
+texture = ExtResource( 3 )
+
+[node name="15" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( 477.313, 530.11 )
+transform/rot = 132.0
+texture = ExtResource( 3 )
+
+[node name="8" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( -646.5, -301.468 )
+transform/rot = 155.0
+texture = ExtResource( 3 )
+
+[node name="16" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( 646.499, 301.468 )
+transform/rot = 155.0
+texture = ExtResource( 3 )
+
+
