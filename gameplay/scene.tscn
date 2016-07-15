@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://gameplay/scene.gd" type="Script" id=1]
 [ext_resource path="res://imgs/ring.png" type="Texture" id=2]
-[ext_resource path="res://imgs/circle.png" type="Texture" id=3]
+[ext_resource path="res://imgs/star.png" type="Texture" id=3]
+[ext_resource path="res://ui/scene.tscn" type="PackedScene" id=4]
 
 [node name="gameplay" type="Node2D"]
 
@@ -12,12 +13,14 @@ BallImgSize = 256
 
 [node name="ring" type="Sprite" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( 0, 1.50739 )
 transform/scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 
 [node name="activeCircle" type="Sprite" parent="."]
 
+visibility/visible = false
 transform/scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 
@@ -25,110 +28,178 @@ texture = ExtResource( 2 )
 
 visibility/opacity = 0.2
 transform/pos = Vector2( 713.333, 0 )
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="9" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
-transform/pos = Vector2( -713.333, 0 )
-texture = ExtResource( 3 )
+transform/pos = Vector2( -702.473, -32.5806 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="2" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
 transform/pos = Vector2( 661.391, -267.219 )
 transform/rot = 22.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="10" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
-transform/pos = Vector2( -661.391, 267.219 )
+transform/pos = Vector2( -650.531, 234.638 )
 transform/rot = 22.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="3" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
 transform/pos = Vector2( 513.129, -495.523 )
 transform/rot = 44.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="11" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
-transform/pos = Vector2( -513.129, 495.523 )
+transform/pos = Vector2( -502.269, 462.942 )
 transform/rot = 44.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="4" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
 transform/pos = Vector2( 290.139, -651.662 )
 transform/rot = 66.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="12" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
-transform/pos = Vector2( -290.139, 651.662 )
+transform/pos = Vector2( -279.279, 619.081 )
 transform/rot = 66.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="5" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
 transform/pos = Vector2( 24.895, -712.899 )
 transform/rot = 88.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="13" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
-transform/pos = Vector2( -24.895, 712.899 )
+transform/pos = Vector2( -14.0348, 680.318 )
 transform/rot = 88.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="6" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
 transform/pos = Vector2( -243.974, -670.314 )
 transform/rot = 110.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="14" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
-transform/pos = Vector2( 243.974, 670.314 )
+transform/pos = Vector2( 254.834, 637.734 )
 transform/rot = 110.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="7" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
 transform/pos = Vector2( -477.313, -530.11 )
 transform/rot = 132.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="15" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
-transform/pos = Vector2( 477.313, 530.11 )
+transform/pos = Vector2( 488.173, 497.529 )
 transform/rot = 132.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="8" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
 transform/pos = Vector2( -646.5, -301.468 )
 transform/rot = 155.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
 
 [node name="16" type="Sprite" parent="activeCircle"]
 
 visibility/opacity = 0.2
-transform/pos = Vector2( 646.499, 301.468 )
+transform/pos = Vector2( 651.929, 268.887 )
 transform/rot = 155.0
-texture = ExtResource( 3 )
+transform/scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
+
+[node name="Particles2D" type="Particles2D" parent="activeCircle"]
+
+visibility/visible = false
+transform/pos = Vector2( -264.095, -162.719 )
+config/amount = 7
+config/lifetime = 1.0
+config/emit_timeout = 1.0
+config/emitting = false
+config/texture = ExtResource( 3 )
+params/direction = 53.2366
+params/spread = 100.0
+params/linear_velocity = 80.0
+params/spin_velocity = 0.5
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 0.0
+params/radial_accel = 40.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 360.0
+params/initial_size = 0.0
+params/final_size = 0.5
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/direction = 1.0
+randomness/spread = 1.0
+randomness/linear_velocity = 1.0
+randomness/orbit_velocity = 1.0
+randomness/initial_angle = 0.558036
+randomness/initial_size = 0.5
+randomness/final_size = 1.0
+
+[node name="clickFeedback" type="Sprite" parent="activeCircle"]
+
+visibility/opacity = 0.0
+transform/pos = Vector2( 380.105, 146.612 )
+texture = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="activeCircle/clickFeedback"]
+
+playback/process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 4 )]
+
+[connection signal="new_game_clicked" from="CanvasLayer" to="." method="_on_CanvasLayer_new_game_clicked"]
+
+[connection signal="restart_game_clicked" from="CanvasLayer" to="." method="_on_CanvasLayer_restart_game_clicked"]
 
 

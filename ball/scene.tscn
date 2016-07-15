@@ -8,9 +8,10 @@
 [node name="Sprite" type="Sprite"]
 
 texture = ExtResource( 1 )
-modulate = Color( 1, 0, 0, 1 )
+modulate = Color( 1, 0.712402, 0.03125, 1 )
 script/script = ExtResource( 2 )
 num = 1
+colors = ColorArray( 0.627451, 0.831373, 0.407843, 1, 0.929412, 0.333333, 0.396078, 1, 0.364706, 0.611765, 0.92549, 1, 1, 0.807843, 0.329412, 1, 0.67451, 0.572549, 0.92549, 1 )
 
 [node name="number" type="Label" parent="."]
 
@@ -23,6 +24,7 @@ margin/top = -75.0
 margin/right = 46.0
 margin/bottom = 91.0
 custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "3"
 align = 1
 valign = 1

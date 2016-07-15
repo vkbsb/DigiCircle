@@ -5,6 +5,7 @@ extends Sprite
 # var a=2
 # var b="textvar"
 export(int) var num = 1
+export(ColorArray) var colors
 var col = Color(1, 0, 0, 1)
 signal move_completed
 var numNode;
@@ -21,11 +22,20 @@ func _ready():
 	
 func set_number(number):
 	num = number
+	if(num >= 10):
+		numNode.hide()
+		starNode.show()
+		starNode.set_scale(Vector2(0, 0))
+		appear_anim(starNode)
 	numNode.set_text(str(number))
+	set_modulate(colors[number % colors.size()])
 	#TODO: write code for changing the color based on number set.
 	
-func appear_anim():
-	tween.interpolate_property(self, "transform/scale", Vector2(0, 0), Vector2(1, 1), 0.25, Tween.TRANS_EXPO, Tween.EASE_OUT)
+func appear_anim(obj = null):
+	var target = self
+	if obj:
+		target = obj
+	tween.interpolate_property(target, "transform/scale", Vector2(0, 0), Vector2(1, 1), 0.25, Tween.TRANS_EXPO, Tween.EASE_OUT)
 	tween.start()
 	
 func move_to(target_pos, duration=0.5, delay=0):
